@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+/f4seplugin/f4se/.vs/f4se/v16
+/f4seplugin/f4se/ESPExplorer/.vs/ESPExplorer/v16
+/f4seplugin/common/x64_v142
+/f4seplugin/f4se/ESPExplorer/x64
+/f4seplugin/f4se/f4se_common/x64
+/f4seplugin/f4se/x64
+/f4seplugin/f4se/x64_v142
+/f4seplugin/f4se/f4se/x64
+*.suo
+*.exp

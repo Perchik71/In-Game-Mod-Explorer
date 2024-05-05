@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="api">
+      <UniqueIdentifier>{54ed2b86-eb79-47ef-83e3-a864ab3d5ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="papyrus">
+      <UniqueIdentifier>{f353cd09-8003-496f-986b-102bae91cc32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="papyrus\vm">
+      <UniqueIdentifier>{f1859657-8c47-4256-8e63-dba08c3338dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scaleform">
+      <UniqueIdentifier>{7a654386-5485-4cd9-ba09-7c8a87e60ea6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QMODExplorer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameData.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameAPI.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameEvents.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameExtraData.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameFormComponents.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameForms.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameInput.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameMemory.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameMenus.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameMessages.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameObjects.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameReferences.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameRTTI.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameSettings.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameStreams.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameCustomization.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameThreads.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameTypes.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\GameUtilities.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusArgs.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusInterfaces.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusNativeFunctions.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusStruct.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusValue.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\PapyrusVM.cpp">
+      <Filter>papyrus\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformAPI.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformCallbacks.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformLoader.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformMovie.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformState.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformTranslator.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformTypes.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\f4se\ScaleformValue.cpp">
+      <Filter>scaleform</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_Hooks_Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QModManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QConvertStringStd17.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QINIReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QHotKey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QMCM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\f4se\GameRTTI.inl">
+      <Filter>api</Filter>
+    </None>
+    <None Include="..\f4se\PapyrusNativeFunctionDef.inl">
+      <Filter>papyrus\vm</Filter>
+    </None>
+    <None Include="..\f4se\PapyrusNativeFunctionDef_Base.inl">
+      <Filter>papyrus\vm</Filter>
+    </None>
+    <None Include="..\f4se\PapyrusStructDef_Base.inl">
+      <Filter>papyrus\vm</Filter>
+    </None>
+    <None Include="..\f4se\PapyrusStructDef.inl">
+      <Filter>papyrus\vm</Filter>
+    </None>
+    <None Include="exports.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\f4se\GameAPI.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameData.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameEvents.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameExtraData.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameFormComponents.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameForms.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameInput.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameMemory.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameMenus.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameMessages.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameObjects.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameReferences.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameRTTI.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameSettings.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameStreams.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameCustomization.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameThreads.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameTypes.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\GameUtilities.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusArgs.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusInterfaces.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusNativeFunctions.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusStruct.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusValue.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\PapyrusVM.h">
+      <Filter>papyrus\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformAPI.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformCallbacks.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformLoader.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformMovie.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformState.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformTranslator.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformTypes.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\f4se\ScaleformValue.h">
+      <Filter>scaleform</Filter>
+    </ClInclude>
+    <ClInclude Include="QModManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QMODExplorer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_Hooks_Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QConvertStringStd17.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QINIReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QHotKey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QMCM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

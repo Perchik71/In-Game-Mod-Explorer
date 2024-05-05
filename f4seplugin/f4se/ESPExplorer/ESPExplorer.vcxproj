@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ESPExplorer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MODExplorer</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\build</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ESPEXPLORER_EXPORTS;RUNTIME;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ForcedIncludeFiles>common/IPrefix.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)f4seplugin;$(SolutionDir);$(SolutionDir)\..</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)_v142\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>common_vc19.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\f4se\GameAPI.cpp" />
+    <ClCompile Include="..\f4se\GameCustomization.cpp" />
+    <ClCompile Include="..\f4se\GameData.cpp" />
+    <ClCompile Include="..\f4se\GameEvents.cpp" />
+    <ClCompile Include="..\f4se\GameExtraData.cpp" />
+    <ClCompile Include="..\f4se\GameFormComponents.cpp" />
+    <ClCompile Include="..\f4se\GameForms.cpp" />
+    <ClCompile Include="..\f4se\GameInput.cpp" />
+    <ClCompile Include="..\f4se\GameMemory.cpp" />
+    <ClCompile Include="..\f4se\GameMenus.cpp" />
+    <ClCompile Include="..\f4se\GameMessages.cpp" />
+    <ClCompile Include="..\f4se\GameObjects.cpp" />
+    <ClCompile Include="..\f4se\GameReferences.cpp" />
+    <ClCompile Include="..\f4se\GameRTTI.cpp" />
+    <ClCompile Include="..\f4se\GameSettings.cpp" />
+    <ClCompile Include="..\f4se\GameStreams.cpp" />
+    <ClCompile Include="..\f4se\GameThreads.cpp" />
+    <ClCompile Include="..\f4se\GameTypes.cpp" />
+    <ClCompile Include="..\f4se\GameUtilities.cpp" />
+    <ClCompile Include="..\f4se\PapyrusArgs.cpp" />
+    <ClCompile Include="..\f4se\PapyrusInterfaces.cpp" />
+    <ClCompile Include="..\f4se\PapyrusNativeFunctions.cpp" />
+    <ClCompile Include="..\f4se\PapyrusStruct.cpp" />
+    <ClCompile Include="..\f4se\PapyrusValue.cpp" />
+    <ClCompile Include="..\f4se\PapyrusVM.cpp" />
+    <ClCompile Include="..\f4se\ScaleformAPI.cpp" />
+    <ClCompile Include="..\f4se\ScaleformCallbacks.cpp" />
+    <ClCompile Include="..\f4se\ScaleformLoader.cpp" />
+    <ClCompile Include="..\f4se\ScaleformMovie.cpp" />
+    <ClCompile Include="..\f4se\ScaleformState.cpp" />
+    <ClCompile Include="..\f4se\ScaleformTranslator.cpp" />
+    <ClCompile Include="..\f4se\ScaleformTypes.cpp" />
+    <ClCompile Include="..\f4se\ScaleformValue.cpp" />
+    <ClCompile Include="EE_Hooks_Input.cpp" />
+    <ClCompile Include="QMCM.cpp" />
+    <ClCompile Include="QMODExplorer.cpp" />
+    <ClCompile Include="QConvertStringStd17.cpp" />
+    <ClCompile Include="QHotKey.cpp" />
+    <ClCompile Include="QINIReader.cpp" />
+    <ClCompile Include="QModManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\f4se\GameRTTI.inl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\f4se\PapyrusNativeFunctionDef.inl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\f4se\PapyrusNativeFunctionDef_Base.inl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\f4se\PapyrusStructDef.inl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\f4se\PapyrusStructDef_Base.inl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="exports.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\f4se_common\f4se_common.vcxproj">
+      <Project>{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\f4se\GameAPI.h" />
+    <ClInclude Include="..\f4se\GameCustomization.h" />
+    <ClInclude Include="..\f4se\GameData.h" />
+    <ClInclude Include="..\f4se\GameEvents.h" />
+    <ClInclude Include="..\f4se\GameExtraData.h" />
+    <ClInclude Include="..\f4se\GameFormComponents.h" />
+    <ClInclude Include="..\f4se\GameForms.h" />
+    <ClInclude Include="..\f4se\GameInput.h" />
+    <ClInclude Include="..\f4se\GameMemory.h" />
+    <ClInclude Include="..\f4se\GameMenus.h" />
+    <ClInclude Include="..\f4se\GameMessages.h" />
+    <ClInclude Include="..\f4se\GameObjects.h" />
+    <ClInclude Include="..\f4se\GameReferences.h" />
+    <ClInclude Include="..\f4se\GameRTTI.h" />
+    <ClInclude Include="..\f4se\GameSettings.h" />
+    <ClInclude Include="..\f4se\GameStreams.h" />
+    <ClInclude Include="..\f4se\GameThreads.h" />
+    <ClInclude Include="..\f4se\GameTypes.h" />
+    <ClInclude Include="..\f4se\GameUtilities.h" />
+    <ClInclude Include="..\f4se\PapyrusArgs.h" />
+    <ClInclude Include="..\f4se\PapyrusInterfaces.h" />
+    <ClInclude Include="..\f4se\PapyrusNativeFunctions.h" />
+    <ClInclude Include="..\f4se\PapyrusStruct.h" />
+    <ClInclude Include="..\f4se\PapyrusValue.h" />
+    <ClInclude Include="..\f4se\PapyrusVM.h" />
+    <ClInclude Include="..\f4se\ScaleformAPI.h" />
+    <ClInclude Include="..\f4se\ScaleformCallbacks.h" />
+    <ClInclude Include="..\f4se\ScaleformLoader.h" />
+    <ClInclude Include="..\f4se\ScaleformMovie.h" />
+    <ClInclude Include="..\f4se\ScaleformState.h" />
+    <ClInclude Include="..\f4se\ScaleformTranslator.h" />
+    <ClInclude Include="..\f4se\ScaleformTypes.h" />
+    <ClInclude Include="..\f4se\ScaleformValue.h" />
+    <ClInclude Include="EE_Hooks_Input.h" />
+    <ClInclude Include="QMCM.h" />
+    <ClInclude Include="QMODExplorer.h" />
+    <ClInclude Include="QConvertStringStd17.h" />
+    <ClInclude Include="QHotKey.h" />
+    <ClInclude Include="QINIReader.h" />
+    <ClInclude Include="QModManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
