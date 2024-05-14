@@ -64,7 +64,7 @@ public:
 	TESObjectCELL	* cell;			// 20
 	TESWorldSpace	* worldspace;	// 28
 
-	DEFINE_MEMBER_FN_1(ctor, ContextData*, 0x00335080, Actor * refr);
+	DEFINE_MEMBER_FN_1(ctor, ContextData*, 0x003350B0, Actor * refr);
 };
 
 // 08
@@ -84,8 +84,8 @@ public:
 	SInt32									powerRating;
 	bool									offGridItems;
 
-	DEFINE_MEMBER_FN_1(AddItem, void, 0x00332920, TESObjectREFR* akRef);
-	DEFINE_MEMBER_FN_3(AddConnection, void, 0x00332F60, TESObjectREFR* akRef1, TESObjectREFR* akRef2, TESObjectREFR* akWireRef);
+	DEFINE_MEMBER_FN_1(AddItem, void, 0x00332950, TESObjectREFR* akRef);
+	DEFINE_MEMBER_FN_3(AddConnection, void, 0x00332F90, TESObjectREFR* akRef1, TESObjectREFR* akRef2, TESObjectREFR* akWireRef);
 };
 
 extern RelocPtr<BSPointerHandle<TESObjectREFR>> hCurrentWorkshop;
@@ -112,6 +112,4 @@ typedef void(*_EstablishTerminalLinks)(TESObjectREFR* akWireRef);
 extern RelocAddr <_EstablishTerminalLinks> EstablishTerminalLinks;
 }
 
-typedef TESObjectREFR * (*_GetObjectAtConnectPoint)(TESObjectREFR * source, NiPoint3 * connectPos, bhkWorld * world, float unk1);
-extern RelocAddr <_GetObjectAtConnectPoint> GetObjectAtConnectPoint;
-
+TESObjectREFR * GetObjectAtConnectPoint(const TESObjectREFR & source, NiPoint3 & connectPos, const bhkWorld & world, float radius);

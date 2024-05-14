@@ -13,7 +13,7 @@ USHORT g_espHotKey;
 extern void HotKeyProc();
 extern bool g_EnableClipboard;
 extern void GetClipboard();
-extern bool g_AZERTYKeyboard;
+//extern bool g_AZERTYKeyboard;
 
 BOOL WINAPI Hook_RegisterRawInputDevices(RAWINPUTDEVICE * devices, UINT numDevices, UINT structSize)
 {
@@ -64,22 +64,15 @@ UINT WINAPI Hook_GetRawInputData(HRAWINPUT rawinput, UINT cmd, void * data, UINT
 				case RIM_TYPEKEYBOARD:
 				{
 					RAWKEYBOARD * kbd = &input->data.keyboard;
-					if (kbd->VKey == g_espHotKey && kbd->Flags == RI_KEY_BREAK) {
+					if (kbd->VKey == g_espHotKey && kbd->Flags == RI_KEY_BREAK)
 						HotKeyProc();
-					} else if (kbd->VKey == 0x5A && (GetAsyncKeyState(VK_SHIFT) & 0x8000) && !g_AZERTYKeyboard){
-						// Shift+Z
-						HotKeyProc();
-					} else if (kbd->VKey == 0x57 && (GetAsyncKeyState(VK_SHIFT) & 0x8000) && g_AZERTYKeyboard){
-						// Shift+W
-						HotKeyProc();
-					} else if (g_EnableClipboard) {
-						if (GetAsyncKeyState(VK_CONTROL) & 0x8000) {
-							if (kbd->VKey == 0x43){
+					else if (g_EnableClipboard) 
+					{
+						if (GetAsyncKeyState(VK_CONTROL) & 0x8000)
+						{
+							if (kbd->VKey == 0x43)
 								// Ctrl + C
 								GetClipboard();
-							} else if (kbd->VKey == 0x56) {
-								// Ctrl + V
-							}
 						}
 					}
 #if LOG_INPUT_HOOK

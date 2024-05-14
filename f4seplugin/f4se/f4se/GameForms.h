@@ -1471,7 +1471,10 @@ public:
 	UInt32					unk128;
 	UInt32					unk12C;
 	UInt32					unk130;
-	UInt32					unk134;
+	UInt8					cleared;
+	UInt8					everCleared;
+	UInt8					unk136;
+	UInt8					unk137;
 	UInt32					unk138;
 	UInt32					unk13C;
 };
@@ -1503,12 +1506,12 @@ public:
 
 	struct MaxHeightData
 	{
-		UInt32	unk00;				// 00
-		UInt32	unk04;				// 04
+		UInt32	x;				// 00
+		UInt32	y;				// 04
 		UInt8	* maxHeightBlock;	// 08
 	};
 
-	MaxHeightData			* unk50;			// 50
+	MaxHeightData			* heightData;			// 50
 	TESObjectLAND			* land;				// 58
 	SInt32					unk60;				// 60
 	float					unk64;				// 64
@@ -1525,7 +1528,7 @@ public:
 	UInt32					unkEC;				// EC
 
 	MEMBER_FN_PREFIX(TESObjectCELL);
-	DEFINE_MEMBER_FN(GetHavokWorld, bhkWorld*, 0x00476890);
+	DEFINE_MEMBER_FN(GetHavokWorld, bhkWorld*, 0x004768C0);
 };
 STATIC_ASSERT(offsetof(TESObjectCELL, objectList) == 0x70);
 STATIC_ASSERT(offsetof(TESObjectCELL, worldSpace) == 0xC8);
@@ -1804,8 +1807,8 @@ public:
 
 	MEMBER_FN_PREFIX(TESQuest);
 	// broken address
-	DEFINE_MEMBER_FN(ForceRefTo, UInt32, 0x00375050, UInt32 aliasId, TESObjectREFR * reference);
-	DEFINE_MEMBER_FN(NewGame_Internal, UInt8, 0x00617740, UInt8 * unk1, UInt8 unk2);
+//	DEFINE_MEMBER_FN(ForceRefTo, UInt32, 0x00375050, UInt32 aliasId, TESObjectREFR * reference);
+	DEFINE_MEMBER_FN(NewGame_Internal, UInt8, 0x00617770, UInt8 * unk1, UInt8 unk2);
 
 	UInt8 NewGame_Hook(UInt8 * unk1, UInt8 unk2);
 };

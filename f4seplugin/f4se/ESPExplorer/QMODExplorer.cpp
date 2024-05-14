@@ -65,7 +65,7 @@ string s_Text_SEARCH("Search");
 string s_Text_RESULT("Result");
 
 bool g_EnableClipboard = false;
-bool g_AZERTYKeyboard = false;
+//bool g_AZERTYKeyboard = false;
 
 extern USHORT g_espHotKey;
 
@@ -488,7 +488,7 @@ UInt32 ResetHotKey(StaticFunctionTag* base, UInt32 newHotkey)
 	_MESSAGE("Reinitialisation Hotkey:0x%X", newHotkey);
 	
 	g_espHotKey = newHotkey;
-	g_AZERTYKeyboard = false;//MCM::ReadBool(MODNAME, "bAZERTY", false);
+	//g_AZERTYKeyboard = false;//MCM::ReadBool(MODNAME, "bAZERTY", false);
 
 	return g_espHotKey;
 }
@@ -994,7 +994,7 @@ extern "C"
 		"perchik71",
 		0,
 		0,
-		{ RUNTIME_VERSION_1_10_980, 0 },
+		{ RUNTIME_VERSION_1_10_984, 0 },
 		0,	// works with any version of the script extender. you probably do not need to put anything here
 	};
 
@@ -1096,10 +1096,10 @@ extern "C"
 			//HotKey::TextToVirtualKey(MCM::ReadString(MODNAME, "sHotkey", "F10").c_str(), VK_F10);
 		_MESSAGE("Initialisation Hotkey:0x%X", vKey);
 
-		Hooks_Input_Init();
+		//Hooks_Input_Init();
 		Hooks_Input_Commit(vKey);
 
-		g_AZERTYKeyboard = false;//MCM::ReadBool(MODNAME, "bAZERTY", false);
+		//g_AZERTYKeyboard = false;//MCM::ReadBool(MODNAME, "bAZERTY", false);
 
 		return true;
 	}

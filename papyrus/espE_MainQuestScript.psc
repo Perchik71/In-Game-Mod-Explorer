@@ -408,6 +408,14 @@ Function test()
 	; StartExplorer()
 EndFunction
 ; ---------------------------------------------------------------------------------
+Function SetNewHotkey()
+	UnregisterForKey(hotKey)
+	hotKey = espe_f4sefuncs.GetINIInt("General", "hotKey", 121)
+    ; flagAZERTY = espe_f4sefuncs.GetINIInt("General", "AZERTY", 0) ; #DEBUG_LINE_NO:391
+	espe_f4sefuncs.ResetHotKey(hotKey)
+	RegisterForKey(hotKey)
+EndFunction
+; ---------------------------------------------------------------------------------
 Function ResetMain()
 	Debug.Trace("espE_MainQuestScript Reset")
 	hotKey = espE_f4seFuncs.GetINIInt("General", "HotKey", 121)

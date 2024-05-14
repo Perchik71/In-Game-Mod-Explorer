@@ -16,9 +16,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "f4se_loader_common", "f4se_
 		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6} = {20C6411C-596F-4B85-BE4E-8BC91F59D8A6}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MODExplorer", "ESPExplorer\ESPExplorer.vcxproj", "{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common_vc19", "..\common\common_vc14.vcxproj", "{472E19AB-DEF0-42DF-819B-18722E8DC822}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MODExplorer", "ESPExplorer\ESPExplorer.vcxproj", "{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,19 +46,19 @@ Global
 		{BE858737-949E-48CF-ADF9-079389049B57}.Debug|x64.Build.0 = Debug|x64
 		{BE858737-949E-48CF-ADF9-079389049B57}.Release|x64.ActiveCfg = Release|x64
 		{BE858737-949E-48CF-ADF9-079389049B57}.Release|x64.Build.0 = Release|x64
-		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Debug|x64.ActiveCfg = Release|x64
-		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Debug|x64.Build.0 = Release|x64
-		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Release|x64.ActiveCfg = Release|x64
-		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Release|x64.Build.0 = Release|x64
 		{472E19AB-DEF0-42DF-819B-18722E8DC822}.Debug|x64.ActiveCfg = Debug|x64
 		{472E19AB-DEF0-42DF-819B-18722E8DC822}.Debug|x64.Build.0 = Debug|x64
 		{472E19AB-DEF0-42DF-819B-18722E8DC822}.Release|x64.ActiveCfg = Release|x64
 		{472E19AB-DEF0-42DF-819B-18722E8DC822}.Release|x64.Build.0 = Release|x64
+		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Debug|x64.ActiveCfg = Release|x64
+		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Debug|x64.Build.0 = Release|x64
+		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Release|x64.ActiveCfg = Release|x64
+		{F7BEFFEC-0C70-4E6A-9211-9B21D1640B90}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8476C0FD-92AC-45CF-B344-12A66E2F0371}
+		SolutionGuid = {2008671D-EB29-4B46-A290-89A2652A89D9}
 	EndGlobalSection
 EndGlobal

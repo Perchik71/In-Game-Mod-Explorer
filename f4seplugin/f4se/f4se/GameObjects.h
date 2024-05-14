@@ -228,14 +228,14 @@ public:
 	tArray<BGSCharacterTint::Entry*>	* tints;			// 300 - CF 0x800
 
 	MEMBER_FN_PREFIX(TESNPC);
-	DEFINE_MEMBER_FN(ctor, TESNPC*, 0x005FAA00);
-	DEFINE_MEMBER_FN(HasOverlays, bool, 0x0060B0E0);
-	DEFINE_MEMBER_FN(GetOverlayHeadParts, BGSHeadPart**, 0x0060B1F0);
-	DEFINE_MEMBER_FN(GetNumOverlayHeadParts, int, 0x0060B2A0);
-	DEFINE_MEMBER_FN(GetSex, SInt64, 0x005F0B90); // npc->actorData.unk08 & 1
-	DEFINE_MEMBER_FN(ChangeHeadPartRemovePart, void, 0x006018A0, BGSHeadPart *, bool bRemoveExtraParts);
-	DEFINE_MEMBER_FN(ChangeHeadPart, void, 0x00605CB0, BGSHeadPart *);
-	DEFINE_MEMBER_FN(GetSkinColorFromTint, void, 0x00601C10, NiColorA * outColor, BGSCharacterTint::PaletteEntry* paletteEntry, bool allowCustomization); // This function alters the npc's Skin Color values
+	DEFINE_MEMBER_FN(ctor, TESNPC*, 0x005FAA30);
+	DEFINE_MEMBER_FN(HasOverlays, bool, 0x0060B110);
+	DEFINE_MEMBER_FN(GetOverlayHeadParts, BGSHeadPart**, 0x0060B220);
+	DEFINE_MEMBER_FN(GetNumOverlayHeadParts, int, 0x0060B2D0);
+	DEFINE_MEMBER_FN(GetSex, SInt64, 0x005F0BC0); // npc->actorData.unk08 & 1
+	DEFINE_MEMBER_FN(ChangeHeadPartRemovePart, void, 0x006018D0, BGSHeadPart *, bool bRemoveExtraParts);
+	DEFINE_MEMBER_FN(ChangeHeadPart, void, 0x00605CE0, BGSHeadPart *);
+	DEFINE_MEMBER_FN(GetSkinColorFromTint, void, 0x00601C40, NiColorA * outColor, BGSCharacterTint::PaletteEntry* paletteEntry, bool allowCustomization); // This function alters the npc's Skin Color values
 
 	void ChangeHeadPart(BGSHeadPart * headPart, bool bRemovePart, bool bRemoveExtraParts);
 	BGSHeadPart * GetHeadPartByType(UInt32 type, bool bOverlays = false);
@@ -265,7 +265,23 @@ public:
 	BGSKeywordForm				keywordForm;		// 130
 	TESWeightForm				weight;				// 150
 
-	UInt64		unk160[(0x1B0 - 0x160)/8];			// 160
+	struct AMMO_DATA
+	{
+	public:
+		// members
+		BGSProjectile* projectile;	// 00
+		UInt32 health;				// 08
+		UInt8 flags;				// 0C
+		UInt8 unk0D;				// 0D
+		UInt8 unk0E;				// 0E
+		UInt8 unk0F;				// 0F
+		float damage;				// 10
+	};
+	STATIC_ASSERT(sizeof(AMMO_DATA) == 0x18);
+
+	AMMO_DATA data;                // 160
+	UInt64 shortDesc;  // 178
+	TESModel shellCasing;          // 180
 };
 
 // 300
